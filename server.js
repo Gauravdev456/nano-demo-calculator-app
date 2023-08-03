@@ -1,16 +1,12 @@
 const express = require('express');
 const app = express();
-
 const PORT = process.env.PORT || 8080;
-
 const baseUrl = '/calculator'
-
 app.use(express.json());
-
 const baseRouter = express.Router();
 
 baseRouter.get('/greeting', (req, res) => {
-    return res.send('Hello World2!');
+    return res.send('Hello World!');
     return res.send('');
 });
 
@@ -28,3 +24,6 @@ baseRouter.post('/subtract', (req, res) => {
 });
 
 app.use(baseUrl, baseRouter);
+app.listen(PORT, () => {
+    console.log("Server running at PORT", PORT);
+});
