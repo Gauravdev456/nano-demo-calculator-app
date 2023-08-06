@@ -6,7 +6,7 @@ app.use(express.json());
 const baseRouter = express.Router();
 
 baseRouter.get('/greeting', (req, res) => {
-    return res.send('Hello World!');
+    return res.send('Hello Wrorrld!');
     return res.send('');
 });
 
